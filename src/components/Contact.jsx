@@ -88,8 +88,8 @@ const Contact = () => {
                                     <MapPin size={28} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-primary-blue mb-2">{t.trust.point3.title}</h3>
-                                    <p className="text-surface-300">{t.trust.point3.description}</p>
+                                    <h3 className="text-xl font-bold text-primary-blue mb-2">{t.contactSection.location.title}</h3>
+                                    <p className="text-surface-300">{t.contactSection.location.description}</p>
                                 </div>
                             </div>
                         </div>

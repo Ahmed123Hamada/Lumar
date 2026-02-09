@@ -1,101 +1,86 @@
-import { Truck, Package, Gavel, MessageCircle } from 'lucide-react';
+import { Truck, Package, Gavel, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollReveal';
-import imgEquipment from '../assets/images/high-angle-view-container-ship-commercial-dock.jpg';
-import imgSurplus from '../assets/images/aerial-view-cargo-ship-cargo-container-harbor.jpg';
-import imgAuctions from '../assets/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
 
 const Opportunities = () => {
-  const { t, language } = useLanguage();
-  const headingRef = useScrollReveal();
-  const gridRef = useScrollRevealStagger();
-
-  const whatsappNumber = '4915565999683';
-
-  const createWhatsAppLink = (opportunityTitle) => {
-    const message = language === 'en'
-      ? `Hello LUMAR, I'm interested in: ${opportunityTitle}`
-      : `مرحباً لومار، أنا مهتم بـ: ${opportunityTitle}`;
-    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-  };
+  const { t } = useLanguage();
 
   const opportunities = [
     {
       icon: Truck,
       title: t.opportunities.opp1.title,
       description: t.opportunities.opp1.description,
-      image: imgEquipment,
     },
     {
       icon: Package,
       title: t.opportunities.opp2.title,
       description: t.opportunities.opp2.description,
-      image: imgSurplus,
     },
     {
       icon: Gavel,
       title: t.opportunities.opp3.title,
       description: t.opportunities.opp3.description,
-      image: imgAuctions,
     },
   ];
 
   return (
-    <section id="opportunities" className="py-24 sm:py-28 bg-primary-blue relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary-gold/5 to-transparent pointer-events-none" aria-hidden />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div ref={headingRef} className="reveal-item text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-display-sm font-bold text-white mb-4">
-            {t.opportunities.title}
+    <section id="opportunities" className="py-24 bg-gray-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:16px_16px]" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-block px-4 py-1 rounded-full bg-primary-gold/10 border border-primary-gold/30 text-primary-gold text-sm font-semibold mb-4 tracking-wider uppercase">
+            Special Division
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+            LUMAR <span className="text-primary-gold">|</span> Special Trading
           </h2>
-          <p className="text-xl text-primary-gold font-medium mb-3">
-            {t.opportunities.subtitle}
-          </p>
-          <p className="text-base text-white/80 leading-relaxed">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             {t.opportunities.description}
           </p>
         </div>
 
-        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {opportunities.map((opp, index) => {
             const Icon = opp.icon;
-            const delayClass = ['reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3'][index];
             return (
-              <article
+              <div
                 key={index}
-                className={`reveal-item ${delayClass} group relative bg-white rounded-2xl overflow-hidden shadow-card-modern hover:shadow-card-modern-hover hover:-translate-y-1.5 hover:scale-[1.02] transition-all duration-300 will-change-transform`}
+                className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 hover:border-primary-gold/50"
               >
-                <div className="relative h-44 overflow-hidden rounded-t-2xl">
-                  <img
-                    src={opp.image}
-                    alt=""
-                    className="absolute inset-0 w-full h-full object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500 ease-out"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/90 via-primary-blue/55 to-primary-blue/35" aria-hidden />
-                  <div className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-md border border-white/25 shadow-inner">
-                    <Icon className="text-white" size={24} aria-hidden />
-                  </div>
-                  <h3 className="absolute bottom-4 left-4 right-4 text-lg font-bold text-white drop-shadow-md">
-                    {opp.title}
-                  </h3>
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-gold via-primary-orange to-primary-gold flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary-gold/20">
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
-                <div className="p-6 lg:p-7">
-                  <p className="text-sm text-surface-300 leading-relaxed min-h-[3.5rem] mb-5">
-                    {opp.description}
-                  </p>
-                  <a
-                    href={createWhatsAppLink(opp.title)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-4 bg-[#25D366] text-white rounded-xl text-sm font-semibold hover:bg-[#20bd5a] focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 transition-all duration-200"
-                  >
-                    <MessageCircle size={20} aria-hidden />
-                    {t.opportunities.cta}
-                  </a>
+
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-gold transition-colors">
+                  {opp.title}
+                </h3>
+
+                <p className="text-gray-400 leading-relaxed mb-6">
+                  {opp.description}
+                </p>
+
+                <div className="flex items-center text-primary-gold text-sm font-semibold tracking-wide">
+                  <span className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    View Opportunities
+                  </span>
+                  <ArrowRight className="w-4 h-4 ml-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 delay-75" />
                 </div>
-              </article>
+              </div>
             );
           })}
+        </div>
+
+        <div className="mt-16 text-center">
+          <button
+            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary-gold text-gray-900 rounded-xl font-bold hover:bg-white transition-colors duration-300"
+          >
+            {t.opportunities.cta}
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

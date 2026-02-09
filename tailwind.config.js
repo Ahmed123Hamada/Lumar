@@ -56,6 +56,7 @@ export default {
         'hero-float': 'heroFloat 8s ease-in-out infinite',
         'scroll-bounce': 'scrollBounce 2s ease-in-out infinite',
         'shimmer': 'shimmer 1.5s infinite',
+        'hero-zoom': 'heroZoom 10s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -80,6 +81,10 @@ export default {
         },
         shimmer: {
           '100%': { transform: 'translateX(100%)' },
+        },
+        heroZoom: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.1)' },
         },
       },
       backgroundImage: {

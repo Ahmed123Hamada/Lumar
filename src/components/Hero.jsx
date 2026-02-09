@@ -20,7 +20,8 @@ const Hero = () => {
         <img
           src={heroImage}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-center animate-hero-float"
+          fetchpriority="high"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-hero-zoom"
         />
         {/* Overlay: light at top, slightly stronger at bottom for text readability */}
         <div
@@ -36,9 +37,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
         <div className="hero-entrance max-w-4xl mx-auto">
-          <p className="hero-label text-primary-gold font-semibold text-sm sm:text-base uppercase tracking-[0.2em] mb-5">
-            Global Trade & Sourcing
-          </p>
           <h1 className="hero-title text-display font-bold text-white mb-6 tracking-tight drop-shadow-md">
             {t.hero.title}
           </h1>
@@ -46,26 +44,13 @@ const Hero = () => {
             {t.hero.subtitle}
           </p>
 
-          <div className="hero-ctas flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="hero-ctas flex justify-center">
             <button
-              onClick={() => scrollToSection('services')}
-              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-white text-primary-blue rounded-2xl font-semibold text-base shadow-lg hover:shadow-xl hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto border border-white/50 overflow-hidden"
+              onClick={() => scrollToSection('contact')}
+              className="group relative inline-flex items-center justify-center gap-2.5 px-10 py-5 bg-gradient-to-r from-primary-gold to-primary-orange text-white rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-orange-glow hover:scale-[1.05] active:scale-[0.98] transition-all duration-300 border border-white/20 overflow-hidden max-md:px-5 max-md:py-2"
             >
               <span className="relative z-10 flex items-center gap-2">
-                {t.hero.cta1}
-                <ArrowRight
-                  className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${direction === 'rtl' ? 'rotate-180' : ''}`}
-                  aria-hidden
-                />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-full group-hover:animate-shimmer" />
-            </button>
-            <button
-              onClick={() => scrollToSection('opportunities')}
-              className="group relative inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-primary-orange text-white rounded-2xl font-semibold text-base shadow-lg hover:bg-primary-orange-light hover:shadow-orange-glow hover:scale-[1.03] active:scale-[0.98] transition-all duration-300 w-full sm:w-auto border border-primary-gold/30 overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                {t.hero.cta2}
+                {t.hero.cta}
                 <ArrowRight
                   className={`w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 ${direction === 'rtl' ? 'rotate-180' : ''}`}
                   aria-hidden

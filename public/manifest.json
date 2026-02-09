@@ -1,0 +1,21 @@
+{
+    "name": "LUMAR | Global Trade & Sourcing",
+    "short_name": "LUMAR",
+    "description": "Global Trade & Sourcing Solutions. Bridging Markets. Structuring Trade.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#002159",
+    "theme_color": "#002159",
+    "icons": [
+        {
+            "src": "/logo-navbar.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo-navbar.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

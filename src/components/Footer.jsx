@@ -1,6 +1,6 @@
 import { Mail, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import logo from '../assets/images/Logo lumar -01.jpg';
+import logo from '../assets/images/Logo lumar -06.png';
 import footerBg from '../assets/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 
@@ -26,6 +26,8 @@ const Footer = () => {
         <img
           src={footerBg}
           alt=""
+          loading="lazy"
+          decodings="async"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div
@@ -45,7 +47,7 @@ const Footer = () => {
         <div ref={footerRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-14">
           {/* Company */}
           <div className="reveal-item reveal-delay-1">
-            <img src={logo} alt="LUMAR" className=" w-48 mb-5 opacity-95" />
+            <img src={logo} alt="LUMAR" className=" w-48  opacity-95 rounded-lg" />
             <p className="text-white/80 leading-relaxed text-sm max-w-xs">
               {t.footer.tagline}
             </p>

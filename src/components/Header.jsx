@@ -5,6 +5,7 @@ import logo from '../assets/images/Logo lumar -01.png';
 
 const navItems = [
   { id: 'home', key: 'home' },
+  { id: 'about', key: 'about' },
   { id: 'services', key: 'services' },
   { id: 'opportunities', key: 'opportunities' },
   { id: 'contact', key: 'contact' },
@@ -28,31 +29,41 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
 
-      // Determine scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false); // Hide on scroll down
-      } else {
-        setIsVisible(true); // Show on scroll up
-      }
+          // Determine scroll visibility
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            setIsVisible(false);
+          } else {
+            setIsVisible(true);
+          }
 
-      setIsScrolled(currentScrollY > 24);
-      setLastScrollY(currentScrollY);
+          // Determine scrolled state
+          setIsScrolled(currentScrollY > 24);
+          setLastScrollY(currentScrollY);
 
-      // Active section logic
-      const sections = navItems.map((item) => document.getElementById(item.id));
-      const scrollCheck = currentScrollY + 120;
-      for (let i = sections.length - 1; i >= 0; i--) {
-        if (sections[i] && sections[i].offsetTop <= scrollCheck) {
-          setActiveSection(navItems[i].id);
-          break;
-        }
+          // Active section logic - throttled check
+          const scrollCheck = currentScrollY + 120;
+          for (let i = navItems.length - 1; i >= 0; i--) {
+            const el = document.getElementById(navItems[i].id);
+            if (el && el.offsetTop <= scrollCheck) {
+              setActiveSection(navItems[i].id);
+              break;
+            }
+          }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
@@ -67,34 +78,33 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${isScrolled
-        ? 'py-3 bg-primary-blue/80 backdrop-blur-lg shadow-lg border-b border-white/5'
-        : 'py-5 bg-transparent'
+        ? 'py-3 '
+        : 'py-5 '
         } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`container mx-auto px-4 sm:px-6 border border-white/5 rounded-2xl backdrop-blur-sm px-2 py-2 ${isScrolled ? 'bg-primary-blue/70 backdrop-blur-lg shadow-lg border-b border-white/5 py-2' : 'bg-transparent'}`}>
         <div className="flex items-center justify-between">
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-            className="flex items-center group relative z-50 p-2"
+            className="flex items-center justify-center align-center group relative z-50 transition-transform duration-300 active:scale-95"
           >
-            {/* Blurred background behind logo */}
-            <div className="absolute inset-0 bg-white/10 rounded-xl blur-lg scale-110" />
-            <div className="absolute inset-0 bg-primary-gold/5 rounded-xl blur-md scale-105" />
+            {/* Premium background for logo */}
+            <div className={`absolute inset-0 bg-white/95 backdrop-blur-md rounded-2xl shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:border-primary-gold/30 border border-white/10`} />
             <img
               src={logo}
               alt="LUMAR"
-              className={`transition-all duration-500 ${isScrolled ? 'h-16 w-42' : 'h-16 md:h-20 w-auto'} relative z-10 px-1`}
+              className={`transition-all duration-500 ${isScrolled ? ' h-12 w-auto' : 'w-auto h-14 md:h-14'}  relative z-10 `}
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 bg-white/5 p-1 rounded-2xl backdrop-blur-sm border border-white/10">
+          <nav className="hidden md:flex items-center gap-1 bg-white/5 p-1 rounded-2xl backdrop-blur-md">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${activeSection === item.id
+                className={`relative px-6 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${activeSection === item.id
                   ? 'text-primary-blue bg-white shadow-sm'
                   : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
@@ -107,8 +117,8 @@ const Header = () => {
               onClick={toggleLanguage}
               className="flex items-center gap-2 px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300"
             >
-              <Globe size={18} />
-              <span className="text-sm font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
+              <Globe size={18} className="text-primary-gold" />
+              <span className="text-sm font-medium text-primary-gold">{language === 'en' ? 'العربية' : 'English'}</span>
             </button>
           </nav>
 
@@ -146,16 +156,17 @@ const Header = () => {
           {/* Content container */}
           <div className="relative z-10 flex flex-col justify-center items-center h-full px-6">
             {/* Logo in menu */}
-            <div className="mb-12">
+            <div className="mb-12 relative group">
+              <div className="absolute inset-0 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
               <img
                 src={logo}
                 alt="LUMAR"
-                className="h-16 w-auto opacity-90"
+                className="h-16 w-auto relative z-10 px-6 py-3"
               />
             </div>
 
             {/* Navigation items */}
-            <nav className=" flex flex-col items-center justify-center align-center gap-4 p-6 w-full max-w-sm mt-[23rem] h-[calc(100vh-15rem)] border border-black/10 bg-black/50 w-[calc(100vw-2rem)] rounded-2xl backdrop-blur-md">
+            <nav className=" flex flex-col items-center text-black justify-center align-center bg-white gap-4 p-6 w-full max-w-sm mt-[23rem] h-[calc(100vh-15rem)]  w-[calc(100vw-2rem)] rounded-2xl backdrop-blur-2xl">
               {navItems.map((item, index) => (
                 <button
                   key={item.id}
@@ -163,8 +174,8 @@ const Header = () => {
                   style={{ transitionDelay: `${index * 100}ms` }}
                   className={`w-full py-4 px-6 text-xl font-bold tracking-wide rounded-2xl transition-all duration-500 transform ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                     } ${activeSection === item.id
-                      ? 'bg-gradient-to-r from-primary-gold to-primary-orange text-white shadow-2xl shadow-primary-gold/30 scale-105'
-                      : 'bg-white/10 backdrop-blur-md text-white/90 hover:bg-white/20 hover:scale-105 border border-white/20'
+                      ? 'bg-gradient-to-r from-primary-gold to-primary-orange text-primary-blue shadow-2xl shadow-primary-gold/30 scale-105'
+                      : 'bg-black/10 backdrop-blur-xl text-primary-blue/70 hover:bg-black/20 hover:scale-105 '
                     }`}
                 >
                   {t.nav[item.key]}

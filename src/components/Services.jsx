@@ -1,9 +1,9 @@
 import { Package, Users, Cog } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollReveal';
-import imgIntlTrade from '../assets/images/aerial-view-cargo-ship-with-cargo-container-sea.jpg';
-import imgNetwork from '../assets/images/global-logistics-transportation-network.jpg';
-import imgIndustrial from '../assets/images/logistic-centre.jpg';
+import imgIntlTrade from '../assets/images/Services/India’s Trade Finance System_ Status, Challenges & Way Ahead.jpg';
+import imgNetwork from '../assets/images/Services/Modern Human Resource Strategy Concept.jpg';
+import imgIndustrial from '../assets/images/Services/Key Safety Features for Purchasing Heavy Duty Industrial Racks.jpg';
 
 const Services = () => {
   const { t } = useLanguage();
@@ -16,7 +16,7 @@ const Services = () => {
       title: t.services.service1.title,
       description: t.services.service1.description,
       image: imgIntlTrade,
-      iconBg: 'bg-white/20',
+      iconBg: 'bg-primary-orange',
       iconColor: 'text-white',
     },
     {
@@ -24,21 +24,21 @@ const Services = () => {
       title: t.services.service2.title,
       description: t.services.service2.description,
       image: imgNetwork,
-      iconBg: 'bg-white/20',
-      iconColor: 'text-primary-blue',
+      iconBg: 'bg-primary-orange',
+      iconColor: 'text-white',
     },
     {
       icon: Cog,
       title: t.services.service3.title,
       description: t.services.service3.description,
       image: imgIndustrial,
-      iconBg: 'bg-white/20',
+      iconBg: 'bg-primary-orange',
       iconColor: 'text-white',
     },
   ];
 
   return (
-    <section id="services" className="py-24 sm:py-28 bg-surface-50">
+    <section id="services" className="py-24 sm:py-28 bg-white overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div ref={headingRef} className="reveal-item text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-display-sm font-bold text-primary-blue mb-4">
@@ -67,10 +67,12 @@ const Services = () => {
                   <img
                     src={service.image}
                     alt=""
+                    loading="lazy"
+                    decodings="async"
                     className="absolute inset-0 w-full h-full object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/90 via-primary-blue/50 to-primary-blue/30" aria-hidden />
-                  <div className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/15 backdrop-blur-md border border-white/20 shadow-inner group-hover:scale-105 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/50 via-primary-blue/50 to-primary-blue/30" aria-hidden />
+                  <div className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl  backdrop-blur-md border border-white/20 shadow-inner group-hover:scale-105 transition-transform duration-300">
                     <Icon className={service.iconColor} size={24} aria-hidden />
                   </div>
                 </div>
@@ -78,7 +80,7 @@ const Services = () => {
                   <h3 className="text-lg font-bold text-primary-blue mb-2.5 group-hover:text-primary-orange transition-colors leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-surface-300 leading-relaxed">
+                  <p className="text-sm font-bold text-surface-300 leading-relaxed group-hover:text-primary-blue transition-colors duration-300">
                     {service.description}
                   </p>
                 </div>
