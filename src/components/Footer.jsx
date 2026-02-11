@@ -4,7 +4,7 @@ import logo from '../assets/images/Logo lumar -06.png';
 import footerBg from '../assets/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 
-const Footer = () => {
+const Footer = ({ onLegalClick }) => {
   const { t } = useLanguage();
   const footerRef = useScrollRevealStagger();
 
@@ -72,27 +72,26 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Legal */}
           <div className="reveal-item reveal-delay-3">
             <h3 className="text-xs font-bold text-primary-gold uppercase tracking-widest mb-5">
               {t.footer.legal}
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#impressum"
-                  className="text-white/80 hover:text-primary-gold transition-colors text-sm"
+                <button
+                  onClick={() => onLegalClick('impressum')}
+                  className="text-white/80 hover:text-primary-gold transition-colors text-sm text-left"
                 >
                   {t.footer.impressum}
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#privacy"
-                  className="text-white/80 hover:text-primary-gold transition-colors text-sm"
+                <button
+                  onClick={() => onLegalClick('privacy')}
+                  className="text-white/80 hover:text-primary-gold transition-colors text-sm text-left"
                 >
                   {t.footer.privacy}
-                </a>
+                </button>
               </li>
             </ul>
           </div>

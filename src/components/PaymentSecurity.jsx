@@ -1,8 +1,10 @@
 import { useLanguage } from '../LanguageContext';
 import { ShieldCheck, FileText, Coins, CheckCircle2 } from 'lucide-react';
+import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 
 const PaymentSecurity = () => {
     const { t } = useLanguage();
+    const staggerRef = useScrollRevealStagger();
 
     const features = [
         { ...t.payment.feature1, icon: ShieldCheck },
@@ -14,12 +16,12 @@ const PaymentSecurity = () => {
     return (
         <section id="payment" className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
+                <div ref={staggerRef} className="max-w-6xl mx-auto">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4 reveal-top">
                             {t.payment.title}
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto reveal-top">
                             {t.payment.description}
                         </p>
                     </div>
@@ -30,7 +32,7 @@ const PaymentSecurity = () => {
                             return (
                                 <div
                                     key={index}
-                                    className="flex gap-4 p-6 bg-gradient-to-br from-surface-50 to-white rounded-xl border border-gray-100 hover:border-primary-gold/30 transition-all duration-300 hover:shadow-md"
+                                    className="flex gap-4 p-6 bg-gradient-to-br from-surface-100/50 to-white rounded-xl border border-gray-100 hover:border-primary-gold/30 transition-all duration-300 hover:shadow-md reveal-item"
                                 >
                                     <div className="flex-shrink-0">
                                         <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-gold/20 to-primary-orange/20 flex items-center justify-center">

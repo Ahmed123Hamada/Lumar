@@ -44,7 +44,7 @@ const Services = () => {
           <h2 className="text-display-sm font-bold text-primary-blue mb-4">
             {t.services.title}
           </h2>
-          <p className="text-lg text-surface-300 leading-relaxed">
+          <p className="text-lg text-black/40 leading-relaxed">
             {t.services.subtitle}
           </p>
         </div>
@@ -80,7 +80,7 @@ const Services = () => {
                   <h3 className="text-lg font-bold text-primary-blue mb-2.5 group-hover:text-primary-orange transition-colors leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-sm font-bold text-surface-300 leading-relaxed group-hover:text-primary-blue transition-colors duration-300">
+                  <p className="text-sm font-bold text-black/40 leading-relaxed group-hover:text-primary-blue transition-colors duration-300">
                     {service.description}
                   </p>
                 </div>

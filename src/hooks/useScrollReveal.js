@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const defaultOptions = {
   rootMargin: '0px 0px -60px 0px',
   threshold: 0.1,
-  once: false,
+  once: true,
 };
 
 /**

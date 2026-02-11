@@ -1,8 +1,10 @@
 import { useLanguage } from '../LanguageContext';
 import { Globe, MapPin } from 'lucide-react';
+import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 
 const GlobalReach = () => {
     const { t } = useLanguage();
+    const staggerRef = useScrollRevealStagger();
 
     const regions = [
         { ...t.globalReach.region1, color: 'bg-red-50 text-red-600 border-red-100' },
@@ -18,12 +20,12 @@ const GlobalReach = () => {
                 <Globe className="absolute -right-20 top-20 w-96 h-96 text-primary-blue" />
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div ref={staggerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary-blue mb-4">
+                    <h2 className="text-4xl md:text-5xl font-bold text-primary-blue mb-4 reveal-top">
                         {t.globalReach.title}
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto reveal-top">
                         {t.globalReach.subtitle}
                     </p>
                 </div>
@@ -32,7 +34,7 @@ const GlobalReach = () => {
                     {regions.map((region, index) => (
                         <div
                             key={index}
-                            className={`p-6 rounded-2xl border ${region.color} transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white/50 backdrop-blur-sm`}
+                            className={`p-6 rounded-2xl border ${region.color} transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-white/50 backdrop-blur-sm reveal-item`}
                         >
                             <div className="flex flex-col items-center text-center">
                                 <div className={`w-12 h-12 rounded-full mb-4 flex items-center justify-center ${region.color.split(' ')[0]}`}>

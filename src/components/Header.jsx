@@ -11,7 +11,7 @@ const navItems = [
   { id: 'contact', key: 'contact' },
 ];
 
-const Header = () => {
+const Header = ({ onHomeClick }) => {
   const { t, toggleLanguage, language, direction } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,10 +68,22 @@ const Header = () => {
   }, [lastScrollY]);
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+
+    // If we have a hash related to legal pages, we need to go back to home first
+    const currentHash = window.location.hash.replace('#', '');
+    if (['impressum', 'privacy'].includes(currentHash)) {
+      window.location.hash = id === 'home' ? '' : id;
+      return;
+    }
+
+    if (id === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -84,10 +96,9 @@ const Header = () => {
     >
       <div className={`container mx-auto px-4 sm:px-6 border border-white/5 rounded-2xl backdrop-blur-sm px-2 py-2 ${isScrolled ? 'bg-primary-blue/70 backdrop-blur-lg shadow-lg border-b border-white/5 py-2' : 'bg-transparent'}`}>
         <div className="flex items-center justify-between">
-          <a
-            href="#home"
-            onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-            className="flex items-center justify-center align-center group relative z-50 transition-transform duration-300 active:scale-95"
+          <button
+            onClick={() => scrollToSection('home')}
+            className="flex items-center justify-center align-center group relative z-50 transition-transform duration-300 active:scale-95 text-left"
           >
             {/* Premium background for logo */}
             <div className={`absolute inset-0 bg-white/95 backdrop-blur-md rounded-2xl shadow-card transition-all duration-300 group-hover:shadow-card-hover group-hover:border-primary-gold/30 border border-white/10`} />
@@ -96,7 +107,7 @@ const Header = () => {
               alt="LUMAR"
               className={`transition-all duration-500 ${isScrolled ? ' h-12 w-auto' : 'w-auto h-14 md:h-14'}  relative z-10 `}
             />
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1 bg-white/5 p-1 rounded-2xl backdrop-blur-md">
@@ -154,7 +165,7 @@ const Header = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-74 bg-white/5 rounded-full blur-2xl" />
 
           {/* Content container */}
-          <div className="relative z-10 flex flex-col justify-center items-center h-full px-6">
+          <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 overflow-hidden w-full">
             {/* Logo in menu */}
             <div className="mb-12 relative group">
               <div className="absolute inset-0 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
@@ -166,7 +177,7 @@ const Header = () => {
             </div>
 
             {/* Navigation items */}
-            <nav className=" flex flex-col items-center text-black justify-center align-center bg-white gap-4 p-6 w-full max-w-sm mt-[23rem] h-[calc(100vh-15rem)]  w-[calc(100vw-2rem)] rounded-2xl backdrop-blur-2xl">
+            <nav className=" flex flex-col items-center text-black justify-center align-center bg-white gap-4 p-6 w-full max-w-sm mt-[23rem] h-[calc(100vh-15rem)] max-w-full rounded-2xl backdrop-blur-2xl overflow-y-auto">
               {navItems.map((item, index) => (
                 <button
                   key={item.id}

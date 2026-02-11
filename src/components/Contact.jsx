@@ -47,7 +47,7 @@ const Contact = () => {
                     <h2 className="text-display-sm font-bold text-primary-blue mb-4">
                         {t.contactSection.title}
                     </h2>
-                    <p className="text-lg text-surface-300">
+                    <p className="text-lg text-black/60">
                         {t.contactSection.subtitle}
                     </p>
                 </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                                 <div>
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.footer.contact}</h3>
                                     <div className="space-y-1">
-                                        <p className="text-surface-300">+49 155 65999683</p>
+                                        <p className="text-black/60">+49 155 65999683</p>
                                         <p className="text-sm text-primary-gold font-medium">Available on WhatsApp</p>
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.footer.email}</h3>
-                                    <p className="text-surface-300">info@lumarglobal.com</p>
+                                    <p className="text-black/60">info@lumarglobal.com</p>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.contactSection.location.title}</h3>
-                                    <p className="text-surface-300">{t.contactSection.location.description}</p>
+                                    <p className="text-black/60">{t.contactSection.location.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                                     <CheckCircle size={40} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-primary-blue mb-2">{t.contactSection.form.sent}</h3>
-                                <p className="text-surface-300">{t.contactSection.subtitle}</p>
+                                <p className="text-black/60">{t.contactSection.subtitle}</p>
                             </div>
                         )}
 

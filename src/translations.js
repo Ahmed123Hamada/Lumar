@@ -238,6 +238,55 @@ export const translations = {
 
       rights: '© 2026 LUMAR. All rights reserved.',
     },
+
+    impressum: {
+      title: 'Impressum',
+      name: 'Name',
+      tradeName: 'Trade Name',
+      address: 'Address',
+      contact: 'Contact',
+      legalStatus: 'Legal Status',
+      registrationStatus: 'business registration in process',
+      consultant: 'Independent Trade Consultant',
+    },
+
+    privacy: {
+      title: 'Privacy Policy',
+      introduction: 'We take the protection of your personal data very seriously. Here is how we process your information.',
+      sections: {
+        contactForm: {
+          title: 'Contact Form Data',
+          content: 'When you contact us via the form on our website, we collect the data you provide to process your inquiry and for follow-up questions.',
+        },
+        serverLogs: {
+          title: 'Server Log Files',
+          content: 'The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us (IP address, browser type, operating system, etc.).',
+        },
+        cookies: {
+          title: 'Cookies',
+          content: 'Our website uses cookies to improve user experience and analyze traffic. You can manage your cookie preferences through our consent banner.',
+        },
+        purpose: {
+          title: 'Purpose of Data Collection',
+          content: 'We use your data primarily for communication purposes and to improve our website experience.',
+        },
+        rights: {
+          title: 'Your Rights',
+          content: 'You have the right to request information about your stored personal data at any time. You also have the right to request the correction, blocking, or deletion of this data.',
+        },
+        contact: {
+          title: 'Privacy Contact',
+          content: 'For any questions regarding your privacy, please contact us at info@lumarglobal.com.',
+        },
+      },
+    },
+
+    cookieBanner: {
+      message: 'We use cookies to enhance your browsing experience and analyze our traffic.',
+      accept: 'Accept All',
+      decline: 'Decline',
+      manage: 'Manage Preferences',
+    },
   },
 
   ar: {
@@ -496,6 +545,55 @@ export const translations = {
       phone: 'الهاتف/واتساب',
 
       rights: '© 2026 لومار. جميع الحقوق محفوظة.',
+    },
+
+    impressum: {
+      title: 'بيانات الناشر (Impressum)',
+      name: 'الاسم',
+      tradeName: 'الاسم التجاري',
+      address: 'العنوان',
+      contact: 'الاتصال',
+      legalStatus: 'الوضع القانوني',
+      registrationStatus: 'تسجيل العمل قيد المعالجة',
+      consultant: 'مستشار تجاري مستقل',
+    },
+
+    privacy: {
+      title: 'سياسة الخصوصية',
+      introduction: 'نحن نأخذ حماية بياناتك الشخصية على محمل الجد. إليك كيفية معالجة معلوماتك.',
+      sections: {
+        contactForm: {
+          title: 'بيانات نموذج التواصل',
+          content: 'عند تواصلك معنا عبر النموذج الموجود على موقعنا، فإننا نجمع البيانات التي تقدمها لمعالجة استفسارك وللأسئلة اللاحقة.',
+        },
+        serverLogs: {
+          title: 'سجلات السيرفر',
+          content: 'يقوم مزود الصفحات تلقائياً بجمع وتخزين المعلومات في ما يسمى بملفات سجل السيرفر، والتي ينقلها متصفحك إلينا تلقائياً (عنوان IP، نوع المتصفح، نظام التشغيل، إلخ).',
+        },
+        cookies: {
+          title: 'الكوكيز (ملفات تعريف الارتباط)',
+          content: 'يستخدم موقعنا الكوكيز لتحسين تجربة المستخدم وتحليل حركة المرور. يمكنك إدارة تفضيلات الكوكيز الخاصة بك من خلال بنر الموافقة.',
+        },
+        purpose: {
+          title: 'الغرض من البيانات',
+          content: 'نستخدم بياناتك في المقام الأول لأغراض التواصل ولتحسين تجربة موقعنا الإلكتروني.',
+        },
+        rights: {
+          title: 'حقوق المستخدم',
+          content: 'لديك الحق في طلب معلومات حول بياناتك الشخصية المخزنة في أي وقت. لديك أيضاً الحق في طلب تصحيح هذه البيانات أو حظرها أو حذفها.',
+        },
+        contact: {
+          title: 'وسيلة التواصل بخصوص الخصوصية',
+          content: 'لأي أسئلة تتعلق بخصوصيتك، يرجى التواصل معنا عبر info@lumarglobal.com.',
+        },
+      },
+    },
+
+    cookieBanner: {
+      message: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك وتحليل حركة المرور لدينا.',
+      accept: 'قبول الكل',
+      decline: 'رفض',
+      manage: 'إدارة التفضيلات',
     },
   },
 };

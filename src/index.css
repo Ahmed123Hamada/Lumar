@@ -173,7 +173,7 @@ body {
 .reveal-right.is-visible,
 .reveal-top.is-visible {
   opacity: 1;
-  transform: translate(0);
+  transform: translateX(0) translateY(0);
 }
 
 /* Hero entrance animation – staggered on load */
@@ -238,6 +238,22 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out forwards;
 }
 
 .animate-slide-down {
