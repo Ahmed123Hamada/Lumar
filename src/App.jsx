@@ -69,8 +69,8 @@ function App() {
                 <Services />
                 <Opportunities />
                 {/* <Methodology /> */}
-                {/* <GlobalReach /> */}
-                {/* <Logistics /> */}
+                <GlobalReach />
+                <Logistics />
                 {/* <PaymentSecurity /> */}
                 <Contact />
               </Suspense>

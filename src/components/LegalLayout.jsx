@@ -12,7 +12,7 @@ const LegalLayout = ({ title, children, onBack }) => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-surface-50 animate-slide-down pb-20 w-full overflow-x-hidden">
+        <div className="min-h-screen bg-surface-50 animate-slide-down pb-20 w-full overflow-x-hidden ">
             {/* Background Hero Section */}
             <div className="relative h-[45vh] min-h-[350px] w-full flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0 w-full h-full">
@@ -31,14 +31,14 @@ const LegalLayout = ({ title, children, onBack }) => {
                     />
                 </div>
 
-                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16">
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 max-md:pb-10">
                     <div className="inline-block px-4 py-1.5 rounded-full bg-primary-gold/20 backdrop-blur-md border border-primary-gold/30 text-primary-gold text-xs font-bold uppercase tracking-widest mb-6 focus-visible:outline-none">
                         LUMAR Legal
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight drop-shadow-sm">
                         {title}
                     </h1>
-                    <div className="h-1.5 w-24 bg-primary-gold rounded-full mx-auto mt-8 shadow-lg shadow-primary-gold/20" />
+                    <div className="h-1.5 w-24 bg-primary-gold rounded-full mx-auto mt-8 shadow-lg shadow-primary-gold/20 " />
                 </div>
             </div>
 

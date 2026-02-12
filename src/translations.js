@@ -81,7 +81,8 @@ export const translations = {
 
     // Special Trading Division
     opportunities: {
-      title: 'LUMAR | Special Trading Division',
+      tag: 'Special Division',
+      title: 'LUMAR | Special Trading',
       subtitle: 'Used Goods, Heavy Equipment & Market Opportunities',
       description: 'Professional trade desk for surplus inventories, used equipment, and special market opportunities',
 
@@ -114,6 +115,7 @@ export const translations = {
         submit: 'Send Message',
         sending: 'Sending...',
         sent: 'Message Sent!',
+        whatsapp: 'Available on WhatsApp'
       },
       location: {
         title: 'Germany-Based Operations',
@@ -146,6 +148,7 @@ export const translations = {
 
     // Logistics Coordination
     logistics: {
+      tag: 'LUMAR Logistics',
       title: 'Trade Logistics Coordination',
       description: 'We orchestrate seamless logistics - not as carriers, but as coordinators of your entire supply chain',
 
@@ -252,31 +255,35 @@ export const translations = {
 
     privacy: {
       title: 'Privacy Policy',
-      introduction: 'We take the protection of your personal data very seriously. Here is how we process your information.',
+      introduction: 'We take the protection of your personal data seriously. This website is operated as a simple informational website.',
       sections: {
-        contactForm: {
-          title: 'Contact Form Data',
-          content: 'When you contact us via the form on our website, we collect the data you provide to process your inquiry and for follow-up questions.',
+        general: {
+          title: '1. General Information',
+          content: 'We take the protection of your personal data seriously. This website is operated as a simple informational website. We only process personal data to the extent necessary for technical operation and communication purposes, in accordance with the General Data Protection Regulation (GDPR).',
         },
-        serverLogs: {
-          title: 'Server Log Files',
-          content: 'The provider of the pages automatically collects and stores information in so-called server log files, which your browser automatically transmits to us (IP address, browser type, operating system, etc.).',
-        },
-        cookies: {
-          title: 'Cookies',
-          content: 'Our website uses cookies to improve user experience and analyze traffic. You can manage your cookie preferences through our consent banner.',
-        },
-        purpose: {
-          title: 'Purpose of Data Collection',
-          content: 'We use your data primarily for communication purposes and to improve our website experience.',
-        },
-        rights: {
-          title: 'Your Rights',
-          content: 'You have the right to request information about your stored personal data at any time. You also have the right to request the correction, blocking, or deletion of this data.',
+        hosting: {
+          title: '2. Hosting',
+          content: 'This website is hosted by a professional hosting provider. The hosting provider automatically processes technical data such as:\n\n• IP address\n• Browser type\n• Operating system\n• Date and time of access\n\nThis data is processed for technical security and website functionality purposes (Art. 6(1)(f) GDPR – legitimate interest).',
         },
         contact: {
-          title: 'Privacy Contact',
-          content: 'For any questions regarding your privacy, please contact us at info@lumarglobal.com.',
+          title: '3. Contact Form / Email Contact',
+          content: 'If you contact us via the contact form or email, we process the data you provide (such as name, email address, and message content) solely for the purpose of responding to your inquiry. We do not share your data with third parties.',
+        },
+        cookies: {
+          title: '4. Cookies',
+          content: 'This website may use technically necessary cookies to ensure proper functionality. No tracking or marketing cookies are used unless explicitly stated.',
+        },
+        retention: {
+          title: '5. Data Retention',
+          content: 'Personal data received via contact inquiries is stored only as long as necessary to process the request and fulfill any legal obligations.',
+        },
+        rights: {
+          title: '6. Your Rights',
+          content: 'Under the GDPR, you have the right to:\n\n• Request access to your stored personal data\n• Request correction of inaccurate data\n• Request deletion of your data\n• Restrict or object to processing\n• Lodge a complaint with a supervisory authority\n\nThe responsible supervisory authority in North Rhine-Westphalia is: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.',
+        },
+        contactPrivacy: {
+          title: '7. Contact',
+          content: 'For privacy-related questions, please contact:\n\nEmail: info@lumarglobal.com',
         },
       },
     },
@@ -371,6 +378,7 @@ export const translations = {
 
     // Special Trading Division
     opportunities: {
+      tag: 'القسم الخاص',
       title: 'لومار | قسم الصفقات التجارية الخاصة',
       subtitle: 'البضائع المستعملة، المعدات الثقيلة والفرص التجارية',
       description: 'مكتب تجاري محترف للمخزون الفائض، المعدات المستعملة، والفرص السوقية الخاصة',
@@ -416,6 +424,7 @@ export const translations = {
 
     // Logistics Coordination
     logistics: {
+      tag: 'لومار للخدمات اللوجستية',
       title: 'تنسيق لوجستيات التجارة',
       description: 'ننسق لوجستيات سلسة - ليس كناقلين، بل كمنسقين لسلسلة التوريد الكاملة',
 
@@ -500,6 +509,7 @@ export const translations = {
         submit: 'إرسال الرسالة',
         sending: 'جاري الإرسال...',
         sent: 'تم الإرسال!',
+        whatsapp: 'متاح عبر واتساب'
       },
       location: {
         title: 'عمليات مقرها ألمانيا',
@@ -560,31 +570,35 @@ export const translations = {
 
     privacy: {
       title: 'سياسة الخصوصية',
-      introduction: 'نحن نأخذ حماية بياناتك الشخصية على محمل الجد. إليك كيفية معالجة معلوماتك.',
+      introduction: 'نحن نأخذ حماية بياناتك الشخصية على محمل الجد. يتم تشغيل هذا الموقع كموقع معلوماتي بسيط.',
       sections: {
-        contactForm: {
-          title: 'بيانات نموذج التواصل',
-          content: 'عند تواصلك معنا عبر النموذج الموجود على موقعنا، فإننا نجمع البيانات التي تقدمها لمعالجة استفسارك وللأسئلة اللاحقة.',
+        general: {
+          title: '1. معلومات عامة',
+          content: 'نحن نأخذ حماية بياناتك الشخصية على محمل الجد. يتم تشغيل هذا الموقع كموقع معلوماتي بسيط. نحن نعالج البيانات الشخصية فقط بالقدر اللازم لأغراض التشغيل الفني والتواصل، وفقاً للائحة العامة لحماية البيانات (GDPR).',
         },
-        serverLogs: {
-          title: 'سجلات السيرفر',
-          content: 'يقوم مزود الصفحات تلقائياً بجمع وتخزين المعلومات في ما يسمى بملفات سجل السيرفر، والتي ينقلها متصفحك إلينا تلقائياً (عنوان IP، نوع المتصفح، نظام التشغيل، إلخ).',
-        },
-        cookies: {
-          title: 'الكوكيز (ملفات تعريف الارتباط)',
-          content: 'يستخدم موقعنا الكوكيز لتحسين تجربة المستخدم وتحليل حركة المرور. يمكنك إدارة تفضيلات الكوكيز الخاصة بك من خلال بنر الموافقة.',
-        },
-        purpose: {
-          title: 'الغرض من البيانات',
-          content: 'نستخدم بياناتك في المقام الأول لأغراض التواصل ولتحسين تجربة موقعنا الإلكتروني.',
-        },
-        rights: {
-          title: 'حقوق المستخدم',
-          content: 'لديك الحق في طلب معلومات حول بياناتك الشخصية المخزنة في أي وقت. لديك أيضاً الحق في طلب تصحيح هذه البيانات أو حظرها أو حذفها.',
+        hosting: {
+          title: '2. الاستضافة',
+          content: 'يتم استضافة هذا الموقع من قبل مزود استضافة محترف. يقوم مزود الاستضافة تلقائياً بمعالجة البيانات الفنية مثل:\n\n• عنوان IP\n• نوع المتصفح\n• نظام التشغيل\n• تاريخ ووقت الوصول\n\nتتم معالجة هذه البيانات لأغراض الأمان الفني ووظائف الموقع (المادة 6 (1) (f) من GDPR - المصلحة المشروعة).',
         },
         contact: {
-          title: 'وسيلة التواصل بخصوص الخصوصية',
-          content: 'لأي أسئلة تتعلق بخصوصيتك، يرجى التواصل معنا عبر info@lumarglobal.com.',
+          title: '3. نموذج الاتصال / التواصل عبر البريد الإلكتروني',
+          content: 'إذا قمت بالاتصال بنا عبر نموذج الاتصال أو البريد الإلكتروني، فإننا نعالج البيانات التي تقدمها (مثل الاسم وعنوان البريد الإلكتروني ومحتوى الرسالة) فقط لغرض الرد على استفسارك. نحن لا نشارك بياناتك مع أطراف ثالثة.',
+        },
+        cookies: {
+          title: '4. ملفات تعريف الارتباط (الكوكيز)',
+          content: 'قد يستخدم هذا الموقع ملفات تعريف الارتباط الضرورية فنياً لضمان التشغيل الصحيح. لا يتم استخدام ملفات تعريف ارتباط للتتبع أو التسويق ما لم ينص على خلاف ذلك صراحة.',
+        },
+        retention: {
+          title: '5. الاحتفاظ بالبيانات',
+          content: 'يتم تخزين البيانات الشخصية المستلمة عبر استفسارات الاتصال فقط للفترة اللازمة لمعالجة الطلب والوفاء بأي التزامات قانونية.',
+        },
+        rights: {
+          title: '6. حقوقك',
+          content: 'بموجب اللائحة العامة لحماية البيانات (GDPR)، لديك الحق في:\n\n• طلب الوصول إلى بياناتك الشخصية المخزنة\n• طلب تصحيح البيانات غير الدقيقة\n• طلب حذف بياناتك\n• تقييد المعالجة أو الاعتراض عليها\n• تقديم شكوى إلى سلطة رقابية\n\nالسلطة الرقابية المسؤولة في شمال الراين-وستفاليا هي: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.',
+        },
+        contactPrivacy: {
+          title: '7. للتواصل',
+          content: 'للاستفسارات المتعلقة بالخصوصية، يرجى التواصل عبر:\n\nالبريد الإلكتروني: info@lumarglobal.com',
         },
       },
     },

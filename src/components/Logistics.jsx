@@ -32,8 +32,8 @@ const Logistics = () => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div ref={staggerRef} className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
-                        <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-primary-gold/30 text-primary-blue text-xs font-bold uppercase tracking-widest mb-6 reveal-top">
-                            LUMAR Logistics
+                        <div className="inline-block px-4 py-1.5 rounded-full bg-white/20 border border-primary-gold/30 text-white text-xs font-bold uppercase tracking-widest mb-6 reveal-top">
+                            {t.logistics.tag}
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 reveal-top tracking-tight">
                             {t.logistics.title}

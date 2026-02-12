@@ -1,21 +1,26 @@
 import React from 'react';
 import LegalLayout from './LegalLayout';
 import { useLanguage } from '../LanguageContext';
-import { Database, ShieldCheck, Cookie, Activity, UserCog, Mail } from 'lucide-react';
+import { Database, ShieldCheck, Cookie, Activity, UserCog, Mail, Info, Clock, MessageSquare } from 'lucide-react';
 
 const PrivacyPolicy = ({ onBack }) => {
     const { t } = useLanguage();
 
     const sections = [
         {
-            icon: <Database className="text-primary-gold" size={24} />,
-            title: t.privacy.sections.contactForm.title,
-            content: t.privacy.sections.contactForm.content
+            icon: <Info className="text-primary-gold" size={24} />,
+            title: t.privacy.sections.general.title,
+            content: t.privacy.sections.general.content
         },
         {
-            icon: <Activity className="text-primary-gold" size={24} />,
-            title: t.privacy.sections.serverLogs.title,
-            content: t.privacy.sections.serverLogs.content
+            icon: <Database className="text-primary-gold" size={24} />,
+            title: t.privacy.sections.hosting.title,
+            content: t.privacy.sections.hosting.content
+        },
+        {
+            icon: <Mail className="text-primary-gold" size={24} />,
+            title: t.privacy.sections.contact.title,
+            content: t.privacy.sections.contact.content
         },
         {
             icon: <Cookie className="text-primary-gold" size={24} />,
@@ -23,9 +28,9 @@ const PrivacyPolicy = ({ onBack }) => {
             content: t.privacy.sections.cookies.content
         },
         {
-            icon: <ShieldCheck className="text-primary-gold" size={24} />,
-            title: t.privacy.sections.purpose.title,
-            content: t.privacy.sections.purpose.content
+            icon: <Clock className="text-primary-gold" size={24} />,
+            title: t.privacy.sections.retention.title,
+            content: t.privacy.sections.retention.content
         },
         {
             icon: <UserCog className="text-primary-gold" size={24} />,
@@ -33,9 +38,9 @@ const PrivacyPolicy = ({ onBack }) => {
             content: t.privacy.sections.rights.content
         },
         {
-            icon: <Mail className="text-primary-gold" size={24} />,
-            title: t.privacy.sections.contact.title,
-            content: t.privacy.sections.contact.content
+            icon: <MessageSquare className="text-primary-gold" size={24} />,
+            title: t.privacy.sections.contactPrivacy.title,
+            content: t.privacy.sections.contactPrivacy.content
         }
     ];
 
@@ -56,7 +61,7 @@ const PrivacyPolicy = ({ onBack }) => {
                                 {section.title}
                             </h2>
                         </div>
-                        <div className="text-primary-blue/80 leading-relaxed">
+                        <div className="text-primary-blue/80 leading-relaxed whitespace-pre-line">
                             {section.content}
                         </div>
                     </div>

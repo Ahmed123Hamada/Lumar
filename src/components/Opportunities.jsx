@@ -43,11 +43,21 @@ const Opportunities = () => {
       <div ref={staggerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block px-4 py-1.5 rounded-full bg-primary-gold/20 border border-primary-gold/30 text-primary-gold text-xs font-bold uppercase tracking-widest mb-6 reveal-top">
-            Special Division
+            {t.opportunities.tag}
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight reveal-top">
-            LUMAR <span className="text-primary-gold">|</span> Special Trading
-          </h2>
+          <div className="flex items-center justify-center flex-wrap gap-x-2 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight reveal-top max-md:text-3xl">
+              {t.opportunities.title.split('|').map((part, index, array) => (
+                <span key={index}>
+                  {part}
+                  {index < array.length - 1 && (
+                    <span className="text-primary-gold mx-2">|</span>
+                  )}
+                </span>
+              ))}
+            </h2>
+          </div>
+
           <p className="text-lg text-white/70 max-w-2xl mx-auto reveal-top leading-relaxed">
             {t.opportunities.description}
           </p>

@@ -59,11 +59,12 @@ const Impressum = ({ onBack }) => {
                                 <a
                                     href={section.href}
                                     className="text-primary-blue font-medium hover:text-primary-gold transition-colors break-all"
+                                    dir="ltr"
                                 >
                                     {section.value}
                                 </a>
                             ) : (
-                                <p className="text-primary-blue font-medium whitespace-pre-line leading-relaxed">
+                                <p className="text-primary-blue font-medium whitespace-pre-line leading-relaxed" dir="ltr">
                                     {section.value}
                                 </p>
                             )}

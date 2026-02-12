@@ -63,8 +63,8 @@ const Contact = () => {
                                 <div>
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.footer.contact}</h3>
                                     <div className="space-y-1">
-                                        <p className="text-black/60">+49 155 65999683</p>
-                                        <p className="text-sm text-primary-gold font-medium">Available on WhatsApp</p>
+                                        <p className="text-black/60" dir="ltr">+49 155 65999683</p>
+                                        <p className="text-sm text-primary-gold font-medium">{t.contactSection.form.whatsapp}</p>
                                     </div>
                                 </div>
                             </div>
@@ -136,6 +136,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     className="w-full px-4 py-3 rounded-xl bg-surface-50 border-transparent focus:bg-white focus:border-primary-gold focus:ring-4 focus:ring-primary-gold/10 transition-all duration-200 outline-none"
                                     placeholder={t.contactSection.form.phone}
+                                    dir="ltr"
                                 />
                             </div>
                         </div>

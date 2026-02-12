@@ -1,9 +1,9 @@
 import { Package, Users, Cog } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollReveal';
-import imgIntlTrade from '../assets/images/Services/India’s Trade Finance System_ Status, Challenges & Way Ahead.jpg';
-import imgNetwork from '../assets/images/Services/Modern Human Resource Strategy Concept.jpg';
-import imgIndustrial from '../assets/images/Services/Key Safety Features for Purchasing Heavy Duty Industrial Racks.jpg';
+import imgIntlTrade from '../assets/images/Services/SERVICE1.jpg';
+import imgNetwork from '../assets/images/Services/SERVICE2.jpg';
+import imgIndustrial from '../assets/images/Services/SERVICE3.jpg';
 
 const Services = () => {
   const { t } = useLanguage();

@@ -38,7 +38,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
         <div className="hero-entrance max-w-4xl mx-auto">
           <h1 className="hero-title text-display font-bold text-white mb-6 tracking-tight drop-shadow-md">
-            {t.hero.title}
+            {t.hero.title.split('|').map((part, index, array) => (
+              <span key={index} className={index > 0 ? "text-[0.85em] text-white/90 font-medium" : ""}>
+                {part}
+                {index < array.length - 1 && (
+                  <span className="text-primary-gold mx-2">|</span>
+                )}
+              </span>
+            ))}
           </h1>
           <p className="hero-subtitle text-lg sm:text-xl lg:text-2xl text-white/95 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
             {t.hero.subtitle}

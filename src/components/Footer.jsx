@@ -143,6 +143,7 @@ const Footer = ({ onLegalClick }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white/90 hover:text-primary-gold transition-colors text-sm font-medium"
+                    dir="ltr"
                   >
                     +49 155 65999683
                   </a>
