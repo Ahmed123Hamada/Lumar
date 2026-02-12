@@ -1,9 +1,9 @@
 import { Package, Users, Cog } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollReveal';
-import imgIntlTrade from '../assets/images/Services/SERVICE1.jpg';
-import imgNetwork from '../assets/images/Services/SERVICE2.jpg';
-import imgIndustrial from '../assets/images/Services/SERVICE3.jpg';
+import imgIntlTrade from '../assets/images/Services/SERVICE3.jpg';
+import imgNetwork from '../assets/images/Services/SERVICE1.jpg';
+import imgIndustrial from '../assets/images/Services/SERVICE2.jpg';
 
 const Services = () => {
   const { t } = useLanguage();
