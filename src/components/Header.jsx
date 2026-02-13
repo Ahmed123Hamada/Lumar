@@ -172,7 +172,7 @@ const Header = ({ onHomeClick }) => {
           }`}
       >
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-blue via-primary-blue-dark to-[#001440]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-red   via-red-dark to-[#001440]" />
 
         {/* Decorative blobs (optional) */}
         <div className="absolute  right-0 w-64 h-64 sm:w-96 sm:h-96 bg-primary-gold/10 rounded-full blur-3xl translate-x-1/3 animate-pulse-slow" />
@@ -182,7 +182,7 @@ const Header = ({ onHomeClick }) => {
         <div className="relative z-10 flex flex-col items-top justify-top min-h-screen px-6 mt-28">
 
           {/* Navigation items */}
-          <nav className="flex flex-col items-center gap-5 w-full max-w-md bg-black/50 backdrop-blur-lg text-white border border-white/10 hover:bg-black/20 hover:scale-102 hover:shadow-lg p-4 rounded-2xl">
+          <nav className="flex flex-col items-center gap-5 w-full max-w-md bg-black/30 backdrop-blur-lg text-white border border-white/10 hover:scale-102 hover:shadow-lg p-4 rounded-2xl">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
@@ -194,7 +194,7 @@ const Header = ({ onHomeClick }) => {
                   ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}
                   ${activeSection === item.id
                     ? 'bg-gradient-to-r from-primary-gold to-primary-orange text-primary-blue shadow-2xl shadow-primary-gold/40 scale-105'
-                    : 'bg-white/10 backdrop-blur-lg text-white border border-white/10 hover:bg-white/20 hover:scale-102 hover:shadow-lg'
+                    : 'bg-white/10 backdrop-blur-lg text-white border border-white/10  hover:scale-102 hover:shadow-lg'
                   }
                 `}
               >
