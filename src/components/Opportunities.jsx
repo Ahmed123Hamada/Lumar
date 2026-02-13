@@ -31,7 +31,7 @@ const Opportunities = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={specialBg}
-          alt=""
+          alt="Used Heavy Equipment, Truck Heads and Surplus Inventory Opportunities"
           className="w-full h-full object-cover"
         />
         {/* Deep navy overlay to match theme */}

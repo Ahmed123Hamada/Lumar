@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt=""
+          alt="Global Sourcing and Trade Logistics - Lumar Trade Office"
           fetchpriority="high"
           className="absolute inset-0 w-full h-full object-cover object-center animate-hero-zoom"
         />

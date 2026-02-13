@@ -20,7 +20,7 @@ const Logistics = () => {
             <div className="absolute inset-0 z-0">
                 <img
                     src={logisticBg}
-                    alt=""
+                    alt="International Trade Logistics and Global Shipping Coordination"
                     className="w-full h-full object-cover"
                 />
                 {/* Modern Dark Overlay */}

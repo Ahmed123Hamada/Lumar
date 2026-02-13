@@ -25,7 +25,7 @@ const Footer = ({ onLegalClick }) => {
       <div className="absolute inset-0 z-0">
         <img
           src={footerBg}
-          alt=""
+          alt="LUMAR Global Trade Sourcing - Port and Logistics Hub"
           loading="lazy"
           decodings="async"
           className="absolute inset-0 w-full h-full object-cover object-center"

@@ -66,7 +66,7 @@ const Services = () => {
                 <div className="relative h-40 overflow-hidden rounded-t-2xl">
                   <img
                     src={service.image}
-                    alt=""
+                    alt={service.title}
                     loading="lazy"
                     decodings="async"
                     className="absolute inset-0 w-full h-full object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500 ease-out"

@@ -18,7 +18,7 @@ const LegalLayout = ({ title, children, onBack }) => {
                 <div className="absolute inset-0 z-0 w-full h-full">
                     <img
                         src={legalBg}
-                        alt=""
+                        alt="LUMAR Trade Office - Legal and Compliance Documentation"
                         className="absolute inset-0 w-full h-full object-cover object-center"
                     />
                     <div
