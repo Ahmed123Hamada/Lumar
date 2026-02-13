@@ -1,7 +1,7 @@
 import { useLanguage } from '../LanguageContext';
 import { Ship, FileCheck, SearchCheck, MapPin } from 'lucide-react';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
-import logisticBg from '../assets/images/airplane-flying-cargo-containers-sunset.jpg';
+const logisticBg = '/images/airplane-flying-cargo-containers-sunset.jpg';
 
 const Logistics = () => {
     const { t } = useLanguage();

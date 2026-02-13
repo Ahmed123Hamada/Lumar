@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import logo from '../assets/images/Logo lumar -01.png';
+const logo = '/images/Logo lumar -01.png';
 
 const navItems = [
   { id: 'home', key: 'home' },

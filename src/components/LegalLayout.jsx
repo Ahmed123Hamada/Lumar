@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import legalBg from '../assets/images/global-logistics-transportation-network.jpg';
+const legalBg = '/images/global-logistics-transportation-network.jpg';
 
 const LegalLayout = ({ title, children, onBack }) => {
     const { direction, t } = useLanguage();

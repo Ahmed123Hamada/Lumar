@@ -61,11 +61,11 @@ npm run preview
 ```
 lumar-website/
 ├── public/
+│   ├── images/         # All images
 │   └── logo-navbar.png
 ├── src/
 │   ├── assets/
-│   │   ├── fonts/          # Lama Sans font files
-│   │   └── images/         # All images
+│   │   └── fonts/          # Lama Sans font files
 │   ├── components/
 │   │   ├── Header.jsx      # Navigation with language toggle
 │   │   ├── Hero.jsx        # Hero section
@@ -129,7 +129,7 @@ All text content is in `src/translations.js`. Edit this file to update any text 
 Brand colors are defined in `tailwind.config.js`. Update the `theme.extend.colors.primary` section.
 
 ### Adding Images
-Place new images in `src/assets/images/` and import them in the relevant component.
+Place new images in `public/images/` and use the absolute path (e.g., `/images/my-image.jpg`) in your components.
 
 ## Deployment
 

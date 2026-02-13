@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import heroImage from '../assets/images/global-logistics-transportation-network.jpg';
+const heroImage = '/images/global-logistics-transportation-network.jpg';
 
 const Hero = () => {
   const { t, direction } = useLanguage();

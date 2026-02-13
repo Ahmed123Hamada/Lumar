@@ -57,7 +57,7 @@ Edit `src/translations.js`
 Edit `tailwind.config.js`
 
 ### Update Images
-Replace files in `src/assets/images/`
+Replace files in `public/images/`
 
 ## 🚀 Deploy to Production
 
@@ -75,10 +75,10 @@ See `DEPLOYMENT.md` for detailed deployment instructions.
 lumar-website/
 ├── src/
 │   ├── components/     # All React components
-│   ├── assets/         # Images and fonts
+│   ├── assets/         # Fonts and styles
 │   ├── translations.js # All text content
 │   └── index.css       # Global styles
-├── public/             # Static files
+├── public/             # Images and static files
 └── package.json        # Dependencies
 ```
 

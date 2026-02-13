@@ -1,7 +1,7 @@
 import { Truck, Package, Gavel, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
-import specialBg from '../assets/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
+const specialBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
 
 const Opportunities = () => {
   const { t } = useLanguage();
