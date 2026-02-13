@@ -19,6 +19,10 @@ const LegalLayout = ({ title, children, onBack }) => {
                     <img
                         src={legalBg}
                         alt="LUMAR Trade Office - Legal and Compliance Documentation"
+                        width="1920"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
                         className="absolute inset-0 w-full h-full object-cover object-center"
                     />
                     <div

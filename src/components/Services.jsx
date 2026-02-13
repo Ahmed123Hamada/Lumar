@@ -69,6 +69,8 @@ const Services = () => {
                     alt={service.title}
                     loading="lazy"
                     decodings="async"
+                    width="400"
+                    height="200"
                     className="absolute inset-0 w-full h-full object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/50 via-primary-blue/50 to-primary-blue/30" aria-hidden />

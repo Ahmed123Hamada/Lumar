@@ -21,6 +21,10 @@ const Logistics = () => {
                 <img
                     src={logisticBg}
                     alt="International Trade Logistics and Global Shipping Coordination"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                 />
                 {/* Modern Dark Overlay */}

@@ -75,10 +75,10 @@ See `DEPLOYMENT.md` for detailed deployment instructions.
 lumar-website/
 ├── src/
 │   ├── components/     # All React components
-│   ├── assets/         # Fonts and styles
+│   ├── assets/         # Styles only
 │   ├── translations.js # All text content
 │   └── index.css       # Global styles
-├── public/             # Images and static files
+├── public/             # Images, fonts and static files
 └── package.json        # Dependencies
 ```
 

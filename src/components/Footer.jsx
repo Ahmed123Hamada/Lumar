@@ -26,8 +26,10 @@ const Footer = ({ onLegalClick }) => {
         <img
           src={footerBg}
           alt="LUMAR Global Trade Sourcing - Port and Logistics Hub"
+          width="1920"
+          height="800"
           loading="lazy"
-          decodings="async"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div
@@ -47,7 +49,7 @@ const Footer = ({ onLegalClick }) => {
         <div ref={footerRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-14">
           {/* Company */}
           <div className="reveal-item reveal-delay-1">
-            <img src={logo} alt="LUMAR" className=" w-48  opacity-95 rounded-lg" />
+            <img src={logo} alt="LUMAR" width="192" height="60" className=" w-48  opacity-95 rounded-lg" />
             <p className="text-white/80 leading-relaxed text-sm max-w-xs">
               {t.footer.tagline}
             </p>

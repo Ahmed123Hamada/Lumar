@@ -62,10 +62,10 @@ npm run preview
 lumar-website/
 ├── public/
 │   ├── images/         # All images
+│   ├── fonts/          # Lama Sans font files
 │   └── logo-navbar.png
 ├── src/
-│   ├── assets/
-│   │   └── fonts/          # Lama Sans font files
+│   ├── assets/         # Styles and other assets
 │   ├── components/
 │   │   ├── Header.jsx      # Navigation with language toggle
 │   │   ├── Hero.jsx        # Hero section

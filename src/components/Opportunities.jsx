@@ -32,6 +32,10 @@ const Opportunities = () => {
         <img
           src={specialBg}
           alt="Used Heavy Equipment, Truck Heads and Surplus Inventory Opportunities"
+          width="1920"
+          height="1080"
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         {/* Deep navy overlay to match theme */}

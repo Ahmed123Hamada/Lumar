@@ -108,6 +108,8 @@ const Header = ({ onHomeClick }) => {
             <img
               src={logo}
               alt="LUMAR"
+              width="180"
+              height="56"
               className={`transition-all duration-500 relative z-10 ${isScrolled ? 'h-12 w-auto' : 'w-auto h-14 md:h-14'
                 }`}
             />
