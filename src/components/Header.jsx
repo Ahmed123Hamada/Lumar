@@ -76,11 +76,19 @@ const Header = ({ onHomeClick }) => {
     }
 
     if (id === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.lenis) {
+        window.lenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     } else {
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        if (window.lenis) {
+          window.lenis.scrollTo(element);
+        } else {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
     }
   };

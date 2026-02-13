@@ -10,7 +10,13 @@ const Footer = ({ onLegalClick }) => {
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      if (window.lenis) {
+        window.lenis.scrollTo(element);
+      } else {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   const quickLinks = [
