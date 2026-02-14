@@ -25,19 +25,21 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/info@lumarglobal.com", {
+            // NOTE: To get the modern template with logo, please get a FREE key for info@lumarglobal.com at web3forms.com
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: JSON.stringify({
+                    access_key: "46100b2b-bd55-4c7e-9257-6a91de22a10e",
                     name: formData.name,
                     email: formData.email,
                     phone: formData.phone,
+                    subject: formData.subject || `New message from Lumar Website: ${formData.name}`,
                     message: formData.message,
-                    _subject: `New message from Lumar Website: ${formData.name}`,
-                    _captcha: "false"
+                    from_name: "Lumar Global Website",
                 })
             });
 
@@ -184,6 +186,20 @@ const Contact = () => {
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 rounded-xl bg-surface-50 border-transparent focus:bg-white focus:border-primary-gold focus:ring-4 focus:ring-primary-gold/10 transition-all duration-200 outline-none"
                                 placeholder="john@example.com"
+                            />
+                        </div>
+
+                        <div className="space-y-2 mb-6">
+                            <label className="text-sm font-semibold text-primary-blue ml-1 block">
+                                {t.contactSection.form.subject}
+                            </label>
+                            <input
+                                type="text"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleChange}
+                                className="w-full px-4 py-3 rounded-xl bg-surface-50 border-transparent focus:bg-white focus:border-primary-gold focus:ring-4 focus:ring-primary-gold/10 transition-all duration-200 outline-none"
+                                placeholder={t.contactSection.form.subject}
                             />
                         </div>
 
