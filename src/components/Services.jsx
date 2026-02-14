@@ -4,7 +4,7 @@ import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollRevea
 const imgIntlTrade = '/images/Services/SERVICE3.jpg';
 const imgNetwork = '/images/Services/SERVICE1.jpg';
 const imgIndustrial = '/images/Services/SERVICE2.jpg';
-const logoEng = '/images/Services/Logo lumar -services-eng.png';
+const logoEng = '/images/Services/Logo lumar -02eng.png';
 const logoAr = '/images/Services/Logo lumar -services.png';
 
 const Services = () => {
