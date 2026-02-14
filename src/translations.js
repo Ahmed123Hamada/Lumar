@@ -116,6 +116,7 @@ export const translations = {
         submit: 'Send Message',
         sending: 'Sending...',
         sent: 'Message Sent!',
+        error: 'Failed to send message. Please try again.',
         whatsapp: 'Available on WhatsApp'
       },
       location: {
@@ -511,6 +512,7 @@ export const translations = {
         submit: 'إرسال الرسالة',
         sending: 'جاري الإرسال...',
         sent: 'تم الإرسال!',
+        error: 'فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.',
         whatsapp: 'متاح عبر واتساب'
       },
       location: {

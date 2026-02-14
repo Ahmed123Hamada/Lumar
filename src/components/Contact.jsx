@@ -18,18 +18,43 @@ const Contact = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSent, setIsSent] = useState(false);
+    const [error, setError] = useState(null);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/info@lumarglobal.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    message: formData.message,
+                    _subject: `New message from Lumar Website: ${formData.name}`,
+                    _captcha: "false"
+                })
+            });
+
+            if (response.ok) {
+                setIsSent(true);
+                setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+                setTimeout(() => setIsSent(false), 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            setError(t.contactSection.form.error || "An error occurred. Please try again later.");
+            setTimeout(() => setError(null), 5000);
+        } finally {
             setIsSubmitting(false);
-            setIsSent(true);
-            setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-            setTimeout(() => setIsSent(false), 5000);
-        }, 1500);
+        }
     };
 
     const handleChange = (e) => {
@@ -107,6 +132,12 @@ const Contact = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold text-primary-blue mb-2">{t.contactSection.form.sent}</h3>
                                 <p className="text-black/60">{t.contactSection.subtitle}</p>
+                            </div>
+                        )}
+
+                        {error && (
+                            <div className="mb-6 p-4 bg-red-50 border border-red-100 text-red-600 rounded-xl text-sm animate-fade-in">
+                                {error}
                             </div>
                         )}
 
