@@ -62,6 +62,7 @@ export const translations = {
 
     // Main Commercial Services
     services: {
+      tag: 'Main Services',
       title: 'Main Commercial Services',
       subtitle: 'Professional trade structuring and business development solutions',
 
@@ -359,6 +360,7 @@ export const translations = {
 
     // Main Commercial Services
     services: {
+      tag: 'الخدمات الرئيسية',
       title: 'الخدمات التجارية الرئيسية',
       subtitle: 'حلول احترافية لهيكلة التجارة وتطوير الأعمال',
 

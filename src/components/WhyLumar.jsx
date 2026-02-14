@@ -37,8 +37,8 @@ const WhyLumar = () => {
                                 className="group bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 reveal-item"
                             >
                                 <div className="flex flex-col items-center text-center">
-                                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-gold/20 to-primary-orange/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                                        <Icon className="w-7 h-7 text-primary-orange" />
+                                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-gold/20 to-primary-gold/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon className="w-7 h-7 text-primary-gold" />
                                     </div>
                                     <h3 className="text-lg font-bold text-primary-blue mb-2">
                                         {reason.title}

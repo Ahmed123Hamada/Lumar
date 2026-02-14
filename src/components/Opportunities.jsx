@@ -2,10 +2,14 @@ import { Truck, Package, Gavel, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 const specialBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
+const logoEng = '/images/Logo lumar subbrand -02.png';
+const logoAr = '/images/Logo lumar subbrand -03.png';
 
 const Opportunities = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const staggerRef = useScrollRevealStagger();
+
+  const brandLogo = language === 'en' ? logoEng : logoAr;
 
   const opportunities = [
     {
@@ -45,11 +49,26 @@ const Opportunities = () => {
       </div>
 
       <div ref={staggerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-primary-gold/20 border border-primary-gold/30 text-primary-gold text-xs font-bold uppercase tracking-widest mb-6 reveal-top">
-            {t.opportunities.tag}
+        <div className="text-center mb-16 flex  justify-center items-center align-center gap-10  ax-md:w-full max-md:flex-col max-md:gap-y-6 ">
+          <div className="flex flex-col justify-center items-center gap-y-2 m">
+            <div className="relative group">
+              {/* White/Gold Glow for visibility */}
+              <div className="absolute -inset-8 bg-primary-gold/10 rounded-full blur-3xl group-hover:bg-primary-gold/20 transition-all duration-700 opacity-0 group-hover:opacity-100" />
+
+              {/* Logo Background Card (Glassmorphism) */}
+              <div className="relative bg-white/65 backdrop-blur-xl px-8 py-6 rounded-[2rem] border border-white/10 shadow-2xl group-hover:border-primary-gold/30 transition-all duration-500 group-hover:shadow-primary-gold/10 group-hover:-translate-y-1">
+                <img
+                  src={brandLogo}
+                  alt="Lumar Special Division Logo"
+                  className="relative h-10 sm:h-10 w-auto object-contain transition-all duration-500 group-hover:scale-110"
+                />
+              </div>
+            </div>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-primary-gold/20 border border-primary-gold/30 text-primary-gold text-xs font-bold uppercase tracking-widest mb-6 reveal-top">
+              {t.opportunities.tag}
+            </div>
           </div>
-          <div className="flex items-center justify-center flex-wrap gap-x-2 mb-6">
+          <div className="flex flex-col items-center justify-center  gap-x-2 mb-6">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight reveal-top max-md:text-3xl">
               {t.opportunities.title.split('|').map((part, index, array) => (
                 <span key={index}>
@@ -60,11 +79,11 @@ const Opportunities = () => {
                 </span>
               ))}
             </h2>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto reveal-top leading-relaxed">
+              {t.opportunities.description}
+            </p>
           </div>
 
-          <p className="text-lg text-white/70 max-w-2xl mx-auto reveal-top leading-relaxed">
-            {t.opportunities.description}
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
