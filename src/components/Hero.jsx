@@ -27,10 +27,10 @@ const Hero = () => {
           src={heroImage}
           alt="Global Sourcing and Trade Logistics - Lumar Trade Office"
           fetchpriority="high"
-          loading="lazy"
+          loading="eager"
           width="1920"
           height="1080"
-          className="absolute inset-0 w-full h-full object-cover object-center animate-hero-zoom"
+          className="absolute inset-0 w-full h-full object-cover object-center md:animate-hero-zoom"
         />
         {/* Overlay: light at top, slightly stronger at bottom for text readability */}
         <div
