@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-const heroImage = '/images/global-logistics-transportation-network.jpg';
+const heroImage = '/images/global-logistics-transportation-network.webp';
 
 const Hero = () => {
   const { t, direction } = useLanguage();
@@ -30,7 +30,7 @@ const Hero = () => {
           loading="eager"
           width="1920"
           height="1080"
-          className="absolute inset-0 w-full h-full object-cover object-center md:animate-hero-zoom"
+          className="absolute inset-0 w-full h-full object-cover object-center animate-hero-zoom"
         />
         {/* Overlay: light at top, slightly stronger at bottom for text readability */}
         <div
