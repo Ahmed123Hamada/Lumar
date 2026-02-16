@@ -117,7 +117,9 @@ export const translations = {
         sending: 'Sending...',
         sent: 'Message Sent!',
         error: 'Failed to send message. Please try again.',
-        whatsapp: 'Available on WhatsApp'
+        whatsapp: 'Available on WhatsApp',
+        chatOnWhatsApp: 'Chat on WhatsApp',
+        sendEmail: 'Send Email'
       },
       location: {
         title: 'Germany-Based Operations',
@@ -513,7 +515,9 @@ export const translations = {
         sending: 'جاري الإرسال...',
         sent: 'تم الإرسال!',
         error: 'فشل إرسال الرسالة. يرجى المحاولة مرة أخرى.',
-        whatsapp: 'متاح عبر واتساب'
+        whatsapp: 'متاح عبر واتساب',
+        chatOnWhatsApp: 'تحدث عبر واتساب',
+        sendEmail: 'إرسال بريد إلكتروني'
       },
       location: {
         title: 'عمليات مقرها ألمانيا',

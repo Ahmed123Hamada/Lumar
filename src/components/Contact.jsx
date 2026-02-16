@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
-import { Send, CheckCircle, Smartphone, Mail, MapPin } from 'lucide-react';
+import { Send, CheckCircle, Smartphone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { useScrollReveal, useScrollRevealStagger } from '../hooks/useScrollReveal';
 
 const Contact = () => {
@@ -83,29 +83,45 @@ const Contact = () => {
                     {/* Contact Info Cards */}
                     <div className="reveal-left space-y-6">
                         <div className="bg-white p-8 rounded-2xl shadow-card-modern hover:shadow-card-modern-hover transition-all duration-300 group">
-                            <div className="flex items-start gap-6">
-                                <div className="w-14 h-14 rounded-2xl bg-primary-blue/5 flex items-center justify-center text-primary-blue group-hover:scale-110 transition-transform duration-300">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                <div className="w-14 h-14 rounded-2xl bg-primary-blue/5 flex items-center justify-center text-primary-blue group-hover:scale-110 transition-transform duration-300 shrink-0">
                                     <Smartphone size={28} />
                                 </div>
-                                <div>
+                                <div className="flex-grow">
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.footer.contact}</h3>
                                     <div className="space-y-1">
-                                        <p className="text-black/60" dir="ltr">+49 155 65999683</p>
+                                        <p className="text-black/60 font-medium" dir="ltr">+49 155 65999683</p>
                                         <p className="text-sm text-primary-gold font-medium">{t.contactSection.form.whatsapp}</p>
                                     </div>
                                 </div>
+                                <a
+                                    href="https://wa.me/4915565999683"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full sm:w-auto px-4 py-3 bg-primary-gold text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-gold/90 transition-all duration-300 shadow-lg shadow-primary-gold/20 hover:shadow-xl hover:shadow-primary-gold/30 group/btn relative z-30 cursor-pointer"
+                                >
+                                    <MessageCircle size={18} className="transition-transform group-hover/btn:scale-110 pointer-events-none" />
+                                    <span className="pointer-events-none text-xs w-full text-center">   {t.contactSection.form.chatOnWhatsApp}</span>
+                                </a>
                             </div>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-card-modern hover:shadow-card-modern-hover transition-all duration-300 group">
-                            <div className="flex items-start gap-6">
-                                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-primary-gold group-hover:scale-110 transition-transform duration-300">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                <div className="w-14 h-14 rounded-2xl bg-primary-gold/10 flex items-center justify-center text-primary-gold group-hover:scale-110 transition-transform duration-300 shrink-0">
                                     <Mail size={28} />
                                 </div>
-                                <div>
+                                <div className="flex-grow">
                                     <h3 className="text-xl font-bold text-primary-blue mb-2">{t.footer.email}</h3>
-                                    <p className="text-black/60">info@lumarglobal.com</p>
+                                    <p className="text-black/60 font-medium">info@lumarglobal.com</p>
                                 </div>
+                                <a
+                                    href="mailto:info@lumarglobal.com"
+                                    className="w-full sm:w-auto px-4 py-3 bg-primary-blue text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-blue/90 transition-all duration-300 shadow-lg shadow-primary-blue/20 hover:shadow-xl hover:shadow-primary-blue/30 group/btn relative z-50 cursor-pointer text-decoration-none"
+                                >
+                                    <Send size={18} className="transition-transform group-hover/btn:translate-x-1 pointer-events-none" />
+                                    <span className="pointer-events-none text-xs w-full text-center">   {t.contactSection.form.sendEmail}</span>
+                                </a>
                             </div>
                         </div>
 
