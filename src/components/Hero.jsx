@@ -27,7 +27,7 @@ const Hero = () => {
           src={heroImage}
           alt="Global Sourcing and Trade Logistics - Lumar Trade Office"
           fetchpriority="high"
-          loading="eager"
+          loading="lazy"
           width="1920"
           height="1080"
           className="absolute inset-0 w-full h-full object-cover object-center animate-hero-zoom"
