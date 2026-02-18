@@ -42,32 +42,42 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-10 sm:py-28 bg-white overflow-hidden">
+    <section id="services" className="py-10 sm:py-28 bg-white overflow-hidden ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div ref={headingRef} className="flex justify-center items-center gap-4 text-center mx-auto mb-16 max-md:flex-col max-md:gap-2">
-          <div className="flex justify-center flex-col items-center mb-8">
-            <div className="relative group flex flex-col items-center gap-4">
+        <div ref={headingRef} className="flex justify-center items-center gap-10 text-center mx-auto mb-16 max-md:flex-col max-md:gap-y-6">
+          {/* Left: Logo + Tag */}
+          <div className="flex flex-col justify-center items-center">
+            <div className="relative group">
               {/* Animated Glow Background */}
-              <div className="absolute -inset-6 bg-primary-orange/10 rounded-full blur-3xl group-hover:bg-primary-orange/20 transition-all duration-700 opacity-0 group-hover:opacity-100" />
+              <div className="absolute -inset-8 bg-primary-orange/10 rounded-full blur-3xl group-hover:bg-primary-orange/20 transition-all duration-700 opacity-0 group-hover:opacity-100" />
 
               {/* Logo Background Card */}
-              <div className="relative bg-white px-8 py-6 rounded-[2rem] shadow-card border border-primary-blue/5 backdrop-blur-sm group-hover:border-primary-orange/20 transition-all duration-500 group-hover:shadow-card-hover group-hover:-translate-y-1">
+              <div className="relative bg-white px-10 py-6 rounded-[2rem] shadow-card border border-primary-blue/5 backdrop-blur-sm group-hover:border-primary-orange/20 transition-all duration-500 group-hover:shadow-card-hover group-hover:-translate-y-1">
                 <img
                   src={brandLogo}
                   alt="Lumar Services Logo"
-                  className="relative h-16 sm:h-20 w-auto object-contain transition-all duration-500 group-hover:scale-110"
+                  className="relative h-10 sm:h-10 w-auto object-contain transition-all duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className=" w-fit mx-auto px-4 py-2  flex justify-center items-center rounded-full  bg-primary-gold/20 border border-primary-gold/30 text-primary-gold text-sm font-bold uppercase tracking-widest mb-6">
-                {t.services.tag}
-              </div>
+            </div>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-primary-gold/20 border border-primary-gold/30 text-primary-gold text-xs font-bold uppercase tracking-widest mt-4">
+              {t.services.tag}
             </div>
           </div>
-          <div className="flex flex-col items-center gap-4">
-            <h2 className="text-display-sm font-bold text-primary-blue mb-4">
-              {t.services.title}
+
+          {/* Right: Title + Subtitle */}
+          <div className="flex flex-col items-center max-md:items-center ">
+            <h2 className="text-display-sm font-bold text-primary-blue">
+              {t.services.title.split('|').map((part, index, array) => (
+                <span key={index}>
+                  {part}
+                  {index < array.length - 1 && (
+                    <span className="text-primary-gold mx-2">|</span>
+                  )}
+                </span>
+              ))}
             </h2>
-            <p className="text-lg text-black/40 leading-relaxed">
+            <p className="text-lg w-[50%] text-black/40 leading-relaxed text-center">
               {t.services.subtitle}
             </p>
           </div>

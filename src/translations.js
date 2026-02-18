@@ -63,7 +63,7 @@ export const translations = {
     // Main Commercial Services
     services: {
       tag: 'Main Services',
-      title: 'Main Commercial Services',
+      title: 'LUMAR | Main Commercial Services',
       subtitle: 'Professional trade structuring and business development solutions',
 
       service1: {
@@ -364,7 +364,7 @@ export const translations = {
     // Main Commercial Services
     services: {
       tag: 'الخدمات الرئيسية',
-      title: 'الخدمات التجارية الرئيسية',
+      title: 'لومار | الخدمات التجارية الرئيسية',
       subtitle: 'حلول احترافية لهيكلة التجارة وتطوير الأعمال',
 
       service1: {
