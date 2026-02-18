@@ -43,9 +43,9 @@ const Opportunities = () => {
           className="w-full h-full object-cover"
         />
         {/* Deep navy overlay to match theme */}
-        <div className="absolute inset-0 bg-primary-blue/50 backdrop-blur-[1px]" />
-        {/* Radial gradient for focus */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#001440_100%)] opacity-60" />
+        <div className="absolute inset-0 bg-primary-blue/40 " />
+        {/* Gradient Overlay for better transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 via-transparent to-primary-blue/20" />
       </div>
 
       <div ref={staggerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
