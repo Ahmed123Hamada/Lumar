@@ -1,7 +1,7 @@
 import { useLanguage } from '../LanguageContext';
 import { Ship, FileCheck, SearchCheck, MapPin } from 'lucide-react';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
-const logisticBg = '/images/airplane-flying-cargo-containers-sunset.jpg';
+const logisticBg = '/images/airplane-flying-cargo-containers-sunset.webp';
 
 const Logistics = () => {
     const { t } = useLanguage();
@@ -28,7 +28,7 @@ const Logistics = () => {
                     className="w-full h-full object-cover"
                 />
                 {/* Modern Dark Overlay */}
-                <div className="absolute inset-0 bg-primary-blue/40 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-primary-blue/40 " />
                 {/* Gradient Overlay for better transition */}
                 <div className="absolute inset-0 bg-gradient-to-b from-primary-blue/20 via-transparent to-primary-blue/20" />
             </div>

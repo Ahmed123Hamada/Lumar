@@ -1,7 +1,7 @@
 import { Truck, Package, Gavel, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
-const specialBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
+const specialBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.webp';
 const logoEng = '/images/Logo lumar subbrand -02.png';
 const logoAr = '/images/Logo lumar subbrand -03.png';
 

@@ -1,7 +1,7 @@
 import { Mail, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 const logo = '/images/Logo lumar -06.png';
-const footerBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.jpg';
+const footerBg = '/images/vibrant-nighttime-port-scene-with-cargo-city-lights.webp';
 import { useScrollRevealStagger } from '../hooks/useScrollReveal';
 
 const Footer = ({ onLegalClick }) => {
